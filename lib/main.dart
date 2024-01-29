@@ -1,19 +1,23 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
-class MyApp extends StatefulWidget {
-  const MyApp({super.key});
+class MyApp extends StatelessWidget {
+  const MyApp({Key? key}) : super(key: key);
 
-  @override
-  State<MyApp> createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
-    return Container(color: Colors.red,);
+    return MaterialApp(
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text("My Flutter App"),
+        ),
+        body: Center(
+          child: Text("Hello, Flutter!"),
+        ),
+      ),
+    );
   }
 }
